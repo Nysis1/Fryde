@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Fryde.Models;
 
 namespace Fryde.Data
 {
@@ -12,5 +13,7 @@ namespace Fryde.Data
             : base(options)
         {
         }
+        public DbSet<Fryde.Models.Music> Music { get; set; }
+        public DbSet<Fryde.Models.Playlist> Playlist { get; set; }
     }
 }
